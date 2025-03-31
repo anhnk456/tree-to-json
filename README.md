@@ -1,24 +1,28 @@
-# my-vue-webpack-project
+# Create by: Nguyễn Thuần Huy - Phú Thọ - VNPT-IT
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#cách dùng khi install về
 
-### Lints and fixes files
-```
-npm run lint
-```
+    <DatePicker v-show="showDate"/>
+    <Dialog v-show="showDate"></Dialog>
+    <div v-show="showDate">
+      <Select />
+    </div>
+    <TreeToJson :isData="DataJson" :isView="false" :isEditable="false" :isCreate="true" />
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+Sau khi cài đặt package, thêm vào file sử dụng thư viện
+
+```javascript
+const showDate = ref(false);
+import TreeToJson from 'tree-to-json-v2';
+import "tree-to-json-v2/dist/TreeToJson.css"
+import "tree-to-json-v2/dist/assets/base.css"
+import "tree-to-json-v2/dist/assets/custom.css"
+import "tree-to-json-v2/dist/assets/tailwind.css"
+import "tree-to-json-v2/dist/assets/primeicons/primeicons.css"
+import { Select, DatePicker,Dialog } from "primevue";
+// Hoặc import từng file riêng nếu cần

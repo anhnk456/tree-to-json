@@ -1,0 +1,13 @@
+:root {
+    --p-primary-color: #046ac8;
+    --p-button-primary-hover-background: #0087ff;
+    --p-button-outlined-primary-border-color: #86cbec;
+}
+
+.layout-topbar {
+    border-bottom: 1px solid #ccc;
+}
+
+.text-red {
+    color: red;
+}

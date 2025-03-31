@@ -1,20 +1,28 @@
 {
-  "name": "my-vue-webpack-project",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tree-to-json-v2",
+  "version": "1.1.9",
+  "main": "dist/TreeToJson.common.js",
+  "files": ["dist/*","*.js","*.json","*.css", "src/assets/*"],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name TreeToJson ./src/components/TreeNodeToJson.vue && cp -r src/assets dist/",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@primevue/themes": "^4.3.3",
     "core-js": "^3.8.3",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.3",
+    "thuanhuy": "^0.1.0",
+    "treenodejson123": "^0.1.0",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.0.17",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -24,8 +32,15 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "autoprefixer": "^10.4.21",
+    "copy-webpack-plugin": "^13.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "postcss": "^8.5.3",
+    "sass": "^1.80.6",
+    "sass-loader": "^16.0.3",
+    "tailwindcss": "^4.0.17",
+    "tailwindcss-primeui": "^0.3.2",
     "typescript": "~4.5.5"
   }
 }
