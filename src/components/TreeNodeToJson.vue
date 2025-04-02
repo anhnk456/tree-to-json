@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-import {ref, watch, computed, onMounted} from 'vue';
+import {ref, watch, computed, onMounted, defineExpose} from 'vue';
 import FallbackToast from './FallbackToast.vue';
 import Button from 'primevue/button';
 import TreeNodeDemo from "@/components/TreeNodeDemo.vue";
@@ -369,12 +369,16 @@ function isValidDate(value) {
   // Có thể thêm các kiểm tra định dạng date khác nếu cần
   return false;
 }
+function getTreeData() {
+  return formattedJsonOutput.value;
+}
 // Lifecycle Hooks
 onMounted(() => {
   if (props.isData) {
     treeData.value = transformJsonToTree(props.isData);
   }
 });
+defineExpose({ getTreeData })
 </script>
 
 <style scoped lang="css">

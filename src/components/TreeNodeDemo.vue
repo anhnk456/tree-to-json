@@ -705,23 +705,6 @@ const validateInputValue = (event, node) => {
   font-weight: bold;
 }
 
-.form-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
-  background-color: #fafafa;
-  border-radius: 0 0 4px 4px;
-}
-
-.array-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  padding: 0px 8px 0px 0px;
-  margin-left: 0px;
-}
-
 .menu {
   background-color: white;
   border-radius: 8px;
@@ -805,7 +788,7 @@ input {
 
 /* Button styles */
 .add-button {
-  min-width: 12rem;
+  min-width: 5rem;
 }
 
 .delete-icon {
@@ -893,7 +876,6 @@ input {
 .form-box {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   padding: 10px;
   background-color: #fafafa;
   border-radius: 0 0 4px 4px;
@@ -905,6 +887,10 @@ input {
   gap: 0;
   padding: 0 8px 0 0;
   margin-left: 0;
+}
+
+.array-item:not(:last-child) {
+  margin-bottom: -10px;
 }
 
 /* Menu styles */

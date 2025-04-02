@@ -1,6 +1,6 @@
 {
-  "name": "tree-to-json-v2",
-  "version": "1.1.9",
+  "name": "tree-to-json-v3",
+  "version": "1.1.16",
   "main": "dist/TreeToJson.common.js",
   "files": ["dist/*","*.js","*.json","*.css", "src/assets/*"],
   "private": false,
